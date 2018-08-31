@@ -4,7 +4,7 @@ let Schema = mongoose.Schema;
 let User = new Schema({
     companyId: String,
     createdAt: String,
-    email: String,
+    email: { type: String },
     emailVerified: Boolean,
     firstName: String,
     lastName: String,
@@ -13,7 +13,7 @@ let User = new Schema({
     lastLoginAt: String,
     photoUri: String,
     emailHash: String,
-    passHash: String,
+    passwordHash: String,
     roles: {
         admin: Boolean,
         companyAdmin: Boolean
